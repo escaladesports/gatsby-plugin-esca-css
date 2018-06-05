@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-esca-css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An opinionated Gatsby plugin to use styled-jsx with PostCSS",
   "scripts": {
     "build": "babel src --out-dir . --ignore __tests__",
