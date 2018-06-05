@@ -1,5 +1,5 @@
 const chokidar = require('chokidar')
-const { remove } = require('fs-extra')
+const { outputJson, remove } = require('fs-extra')
 const touch = require('touch')
 const glob = require('globby')
 
@@ -19,7 +19,19 @@ exports.modifyBabelrc = ({ babelrc }) => {
 }
 
 // Watch CSS files
-exports.modifyWebpackConfig = ({ config, stage }, options) => {
+let copiedConfig = false
+exports.modifyWebpackConfig = async ({ config, stage }, options) => {
+	if (!copiedConfig) {
+		copiedConfig = true
+		await outputJson(`.postcssrc`, {
+			plugins: {
+				'postcss-import': {},
+				'postcss-cssnext': {},
+				'postcss-nested': {},
+				'lost': {},
+			}
+		}, { spaces: '\t' })
+	}
 	if (stage === `develop`) {
 		options = {
 			watchCss: true,
