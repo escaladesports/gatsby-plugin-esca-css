@@ -7,13 +7,13 @@
     "prepublish": "npm run build",
     "watch": "npm run build -- --watch",
     "test": "echo 'no test'",
-    "travis": "opn https://travis-ci.org/escaladesports/gatsby-plugin-styled-jsx-postcss/branches"
+    "travis": "opn https://travis-ci.org/escaladesports/gatsby-plugin-esca-css/branches"
   },
   "main": "gatsby-ssr.js",
-  "homepage": "https://github.com/escaladesports/gatsby-plugin-styled-jsx-postcss",
+  "homepage": "https://github.com/escaladesports/gatsby-plugin-esca-css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/escaladesports/gatsby-plugin-styled-jsx-postcss.git"
+    "url": "https://github.com/escaladesports/gatsby-plugin-esca-css.git"
   },
   "keywords": [
     "gatsby",
